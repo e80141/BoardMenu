@@ -24,6 +24,11 @@
   
   </select>
   
+  <delete id = "deleteMenu">
+   DELETE FROM MENUS
+   WHERE MENU_ID = #{menu_id}
+  
+  </delete>
 </mapper>
 
 

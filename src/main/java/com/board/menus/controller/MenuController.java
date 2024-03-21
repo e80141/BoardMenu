@@ -74,18 +74,33 @@ public class MenuController {
 	
 	
 	// 메뉴삭제 /Menus/Delete?menu_id=Menu03
-	@RequestMapping("/Delete")
-	public String delete(MenuVo menuVo) {
+	//@RequestMapping("/Delete")
+	//public String delete(MenuVo menuVo) {
 		//Menu03 을 삭제
 		
-		menuMapper.deleteMenu(menuVo);
+		//menuMapper.deleteMenu(menuVo);
 		//이동할 파일
-		return "menus/list";
-	}
+		//return "menus/list";
+
 	
+//MENU 수정
+///Menus/UpdateForm?menu_id=$
+@RequestMapping("/Menus/UpdateForm")
+public String updateForm(MenuVo menuVo) {
+	
+	
+	return"menus/update";
 }
 
-
+// /Menus/Update
+@RequestMapping("/Update")
+public String update(MenuVo menuVo) {
+	
+	// 수정 후 조회
+	return "redirect:/Menus/List";
+	
+}
+}
 
 
 
